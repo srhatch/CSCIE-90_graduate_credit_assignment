@@ -1,0 +1,15 @@
+const http = require('http');
+// Import the app.js file where processing of HTTP requests occurs
+const app = require('../app');
+const emailInterval = require('../ses_commands/sendNewsletterInterval');
+
+// Create a TCP server and pass any requests to the app.js file
+const server = http.createServer(app);
+
+// Direct the server to listen on the specified port
+server.listen(8000, () => {
+    console.log(`Listening on port ${server.address().port}`)
+})
+
+// Send newsletter emails at a regular interval
+emailInterval();

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Register</title>
+        <meta charset="UTF-8" />
+        <style>
+            div {
+                text-align: center;
+                display: block;
+                margin: 50px auto 20px;
+                width: 400px;
+            }
+            input[type='text'] {
+                width: 200px;
+            }
+            input[type='submit'] {
+                display: block;
+                margin: auto;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="http://127.0.0.1:8000/register" method="post">
+            <div>
+                <label for="emailInputId" class="emailLabel">Email</label>
+                <input id="emailInputId" class="emailInputClass" type="text" name="email" />
+            </div>
+            <div>
+                <label for="firstNameInputId" class="firstNameLabel">First name</label>
+                <input id="firstNameInputId" class="firstNameInputClass" type="text" name="firstName"/>
+            </div>
+            <div>
+                <label for="lastNameInputId" class="lastNameLable">Last name</label>
+                <input id="lastNameInputId" class="lastNameInputClass" type="text" name="lastName"/>
+            </div>
+            <input class="submitButton" type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
